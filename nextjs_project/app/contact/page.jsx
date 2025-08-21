@@ -2,6 +2,7 @@
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import { Cinzel } from "next/font/google";
+import { useEffect, useState } from "react";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -9,15 +10,48 @@ const cinzel = Cinzel({
 });
 
 export default function Contact() {
+
+  const [lights, setLights] = useState([]);
+    useEffect(() => {
+      const newLights = [...Array(10)].map(() => ({
+        top: `${Math.random() * 80 + 10}%`,
+        left: `${Math.random() * 90 + 5}%`,
+        animationDelay: `${Math.random() * 4}s`,
+      }));
+      setLights(newLights);
+    }, []);
+
   return (
     <main className="relative w-full bg-transparent">
   {/* Hero Section */}
-  <section className="relative py-24 text-center bg-black">
-    <h1 className={`text-5xl font-bold text-yellow-500 mb-4 ${cinzel.className}`}>Contact Us</h1>
-    <p className="text-black dark:text-white text-lg">
-      We’re here to make your events unforgettable ✨
-    </p>
-  </section>
+   <section className="relative w-full h-[60vh] flex items-center justify-center text-center text-white">
+          <Image
+            src="/Home/hero.jpg"
+            alt="Services Hero"
+            fill
+            className="object-cover -z-10 brightness-75"
+          />
+          <div className="z-10 px-6">
+            <h1 className={`text-5xl font-bold text-yellow-400 drop-shadow-lg ${cinzel.className}`}>
+              Contact Us
+            </h1>
+            <p className="mt-4 text-lg max-w-2xl mx-auto">
+              We’re here to make your events unforgettable ✨
+            </p>
+          </div>
+
+          {lights.map((light, i) => (
+          <div
+            key={i}
+            style={{
+              top: light.top,
+              left: light.left,
+              animationDelay: light.animationDelay,
+            }}
+            className="absolute bg-yellow-400 rounded-full w-2 h-2 animate-float"
+          />
+        ))}
+        </section>
 
   {/* Info Cards */}
   <section className="py-16 px-6 max-w-4xl mx-auto grid md:grid-cols-2 gap-15">
