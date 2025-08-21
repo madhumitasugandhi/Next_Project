@@ -52,10 +52,11 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden flex flex-col gap-4 px-6 py-4 bg-black text-white">
           <Link href="/" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link href="/services" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>Services</Link>
-          <Link href="/gallery" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>Gallery</Link>
           <Link href="/about" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>About</Link>
           <Link href="/contact" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link href="/gallery" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>Gallery</Link>
+          <Link href="/services" className="hover:text-yellow-400" onClick={() => setIsOpen(false)}>Services</Link>
+          
         </div>
       )}
     </nav>
