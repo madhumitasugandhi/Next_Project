@@ -2,18 +2,65 @@
 
 @layer base {
   :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --nav-bg: #ffffff;
+    --background: #ffffff; /* Light background */
+    --foreground: #000000; /* Light text */
   }
 
   .dark {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --nav-bg: #0a0a0a;
+    --background: #0a0a0a; /* Dark background */
+    --foreground: #ffffff; /* Dark text */
   }
 
   body {
     background: var(--background);
     color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
   }
+
+  /* Navbar Links */
+  .navbar-links .nav-link {
+    @apply text-gray-900 dark:text-gray-100 hover:text-yellow-400 transition-colors duration-300;
+  }
+}
+
+/* Floating Lights Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Glow Button */
+.btn-glow {
+  transition: all 0.3s ease-in-out;
+  background-color: #eab308; /* Gold */
+  color: #000;
+  border-radius: 9999px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-glow:hover {
+  background-color: #fcd34d; /* lighter gold */
+  color: #000000;
+  box-shadow: 0 0 20px 6px rgba(252, 211, 77, 0.7); /* yellow glow */
+  transform: scale(1.05);
+}
+.floating-lights-container {
+  position: fixed;
+  inset: 0;
+  z-index: 0; /* sabse peeche rahe */
+  pointer-events: none; /* scroll aur click block na ho */
 }

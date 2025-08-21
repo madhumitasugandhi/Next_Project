@@ -1,47 +1,54 @@
+import Image from "next/image";
 import Link from "next/link";
+import { Cinzel } from "next/font/google";
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
 
 export default function Footer() {
   return (
-    <footer className="w-full text-center py-6 mt-10 border-t"
-      style={{
-        background: "var(--background)",
-        color: "var(--foreground)",
-        borderColor: "var(--foreground)",
-      }}>
-      {/* main footer */}
-      <div className="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div>
-          <h2 className="text-xl font-bold text-gray-900 dark:text-white">MySite</h2>
-          <p className="text-sm mt-2">
-            Build amazing websites with Next.js + Tailwind 🚀
+    <footer className="w-full bg-black text-white">
+      {/* Main Footer */}
+      <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-42 text-center md:text-left">
+        
+        {/* Brand */}
+        <div className="flex flex-col items-center md:items-start gap-3">
+          <div className="flex items-center gap-2">
+            <Image src="/logo.png" alt="Royal Events Logo" width={40} height={40} />
+            <span className={`text-2xl font-bold text-yellow-400 ${cinzel.className}`}>Royal Events</span>
+          </div>
+          <p className="text-sm text-gray-400">
+            Creating unforgettable memories since 2022 ✨
           </p>
         </div>
 
-        <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Quick Links</h3>
-          <ul className="mt-2 space-y-1">
-            <li><Link href="/" className="hover:text-black dark:hover:text-white">Home</Link></li>
-            <li><Link href="/about" className="hover:text-black dark:hover:text-white">About</Link></li>
-            <li><Link href="/services" className="hover:text-black dark:hover:text-white">Services</Link></li>
-            <li><Link href="/contact" className="hover:text-black dark:hover:text-white">Contact</Link></li>
-          </ul>
+        {/* Contact Info */}
+        <div className="space-y-2">
+          <h4 className="text-yellow-400 font-semibold mt-4">Contact</h4>
+          <p className="hover:text-yellow-400">Chirag S. Annadate</p>
+          <p> Near Maliwal Gas Godown, Jyoti Nagar, Jatharpeth, Akola</p>
+          <p> 9011787193</p>
         </div>
 
-        <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Follow Us</h3>
-          <div className="mt-2 flex space-x-4">
-            <Link href="#" className="hover:text-black dark:hover:text-white">YouTube</Link>
-            <Link href="#" className="hover:text-black dark:hover:text-white"> Facebook</Link>
-            <Link href="#" className="hover:text-black dark:hover:text-white"> Instagram</Link>
-          </div>
+        {/* Social Links */}
+        <div className="space-y-3">
+          <h4 className="text-yellow-400 font-semibold">Follow Us</h4>
+          <Link
+            href="https://www.instagram.com/royal_events__akola/"
+            target="_blank"
+            className="text-gray-300 hover:text-yellow-400"
+          >
+            Instagram
+          </Link>
         </div>
       </div>
 
-      {/* sub-footer */}
-      <div className="border-t border-gray-300 dark:border-gray-700 transition-colors duration-300">
-        <div className="max-w-6xl mx-auto px-4 py-4 text-center text-sm text-gray-500 dark:text-gray-400">
-          © {new Date().getFullYear()} MySite. All rights reserved.
-        </div>
+      {/* Sub-Footer */}
+      <div className="bg-[#0A0A0A] py-4 text-center text-sm text-gray-400 border-t border-gray-800">
+        © {new Date().getFullYear()} Royal Events. All rights reserved.
       </div>
     </footer>
   );
