@@ -187,15 +187,15 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-center mb-12 text-yellow-400">What Our Clients Say</h2>
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
           <div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow">
-            <p>"Royal Events made our wedding truly magical. Every detail was perfect!"</p>
+            <p>Royal Events made our wedding truly magical. Every detail was perfect!</p>
             <h4 className="mt-4 font-semibold">- Priya & Rahul</h4>
           </div>
           <div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow">
-            <p>"Professional and seamless corporate event. Highly recommended!"</p>
+            <p>Professional and seamless corporate event. Highly recommended!</p>
             <h4 className="mt-4 font-semibold">- Tech Corp</h4>
           </div>
           <div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow">
-            <p>"Our private party was unforgettable, thanks to the Royal Events team!"</p>
+            <p>Our private party was unforgettable, thanks to the Royal Events team!</p>
             <h4 className="mt-4 font-semibold">- Anjali Sharma</h4>
           </div>
         </div>
