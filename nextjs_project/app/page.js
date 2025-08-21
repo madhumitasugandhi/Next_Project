@@ -169,10 +169,10 @@ export default function Home() {
         <section className="py-20 px-6  text-gray-900 dark:text-gray-100 relative z-10">
           <h2 className="text-3xl font-bold text-center mb-12 text-yellow-400">Gallery</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-            <Image src="/gallery/1.jpg" alt="Event 1" width={300} height={200} className="rounded-lg shadow-md dark:shadow-gray-700" />
-            <Image src="/gallery/2.jpg" alt="Event 2" width={300} height={200} className="rounded-lg shadow-md dark:shadow-gray-700" />
-            <Image src="/gallery/3.jpg" alt="Event 3" width={300} height={200} className="rounded-lg shadow-md dark:shadow-gray-700" />
-            <Image src="/gallery/4.jpg" alt="Event 4" width={300} height={200} className="rounded-lg shadow-md dark:shadow-gray-700" />
+            <Image src="/Special-Moment/mehndi.webp" alt="Event 1" width={300} height={200} className="rounded-lg shadow-md dark:shadow-gray-700" />
+            <Image src="/Special-Moment/namkaran.jpg" alt="Event 2" width={300} height={200} className="rounded-lg shadow-md dark:shadow-gray-700" />
+            <Image src="/Special-Moment/haldi.webp" alt="Event 3" width={300} height={200} className="rounded-lg shadow-md dark:shadow-gray-700" />
+            <Image src="/Special-Moment/birthday.webp" alt="Event 4" width={300} height={200} className="rounded-lg shadow-md dark:shadow-gray-700" />
           </div>
         </section>
 
