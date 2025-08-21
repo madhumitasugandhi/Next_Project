@@ -48,7 +48,7 @@ export default function Home() {
         ))}
 
         <div className="px-6 flex flex-col items-center gap-4">
-          <Image src="/logo.png" alt="Royal Events Logo" width={140} height={80} />
+          <Image src="/Logo.png" alt="Royal Events Logo" width={140} height={80} />
           <h1 className={`text-4xl sm:text-6xl font-bold text-yellow-400 drop-shadow-lg ${cinzel.className}`}>
             Royal Events
           </h1>

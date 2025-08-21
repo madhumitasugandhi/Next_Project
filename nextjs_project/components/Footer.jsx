@@ -17,7 +17,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="flex flex-col items-center md:items-start gap-3">
           <div className="flex items-center gap-2">
-            <Image src="/logo.png" alt="Royal Events Logo" width={40} height={40} />
+            <Image src="/Logo.png" alt="Royal Events Logo" width={40} height={40} />
             <span className={`text-2xl font-bold text-yellow-400 ${cinzel.className}`}>Royal Events</span>
           </div>
           <p className="text-sm text-gray-400">

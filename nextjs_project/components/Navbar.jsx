@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo + Brand */}
         <div className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Royal Events Logo" width={40} height={40} />
+          <Image src="/Logo.png" alt="Royal Events Logo" width={40} height={40} />
           <span className={`text-2xl font-bold text-yellow-400 ${cinzel.className}`}>
             Royal Events
           </span>
