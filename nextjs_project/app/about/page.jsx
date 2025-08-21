@@ -10,7 +10,7 @@ const cinzel = Cinzel({
 
 export default function About() {
   return (
-    <main className="relative w-full bg-white/80 dark:bg-black/80 text-black dark:text-white">
+    <main className="relative w-full bg-transparent text-black dark:text-white">
 
       
       {/* ================= Hero / Header Section ================= */}
@@ -27,13 +27,13 @@ export default function About() {
       </section>
 
       {/* ================= Owner & Story Section ================= */}
-      <section className="py-20 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-        <div className="md:w-1/2">
-          <h2 className="text-3xl font-bold mb-4 text-yellow-400">Meet the Founder</h2>
-          <p className="mb-4">
+      <section className="py-20 px-6 max-w-6xl mx-auto flex flex-col col-span-2 md:flex-row items-center gap-10">
+        <div className="md:w-1/2 px-6 bg-black rounded-2xl">
+          <h2 className="text-3xl font-bold m-4  text-yellow-400">Meet the Founder</h2>
+          <p className="m-4 ">
             Royal Events was founded by <span className="font-semibold">Chirag S. Annadate</span> on <span className="font-semibold">1st July 2022</span>. Since then, we have been creating unforgettable memories and magical experiences for our clients.
           </p>
-          <p className="mb-4">
+          <p className="m-4">
             We specialize in a wide range of events including:
           </p>
           <ul className="list-disc list-inside space-y-2 text-lg">
@@ -45,7 +45,7 @@ export default function About() {
             <li>Anniversary </li>
             <li>Inauguration </li>
           </ul>
-          <p className="mt-6 font-semibold">
+          <p className="m-6 font-semibold">
             📲 Contact: <span className="text-yellow-400">9011787193</span>
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function About() {
             src="/About/Founder.png" // Organizer photo
             alt="Chirag S. Annadate"
             width={350}
-            height={400}
+            height={550}
             className="rounded-lg shadow-lg"
           />
         </div>
