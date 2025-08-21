@@ -1,5 +1,6 @@
 "use client";
 import { Cinzel } from "next/font/google";
+import { useEffect, useState } from "react";
 
 
 const cinzel = Cinzel({
@@ -43,6 +44,16 @@ export default function Services() {
     },
   ];
 
+  const [lights, setLights] = useState([]);
+      useEffect(() => {
+        const newLights = [...Array(10)].map(() => ({
+          top: `${Math.random() * 80 + 10}%`,
+          left: `${Math.random() * 90 + 5}%`,
+          animationDelay: `${Math.random() * 4}s`,
+        }));
+        setLights(newLights);
+      }, []);
+
   return (
     <main className="relative w-full bg-transparent text-black dark:text-white ">
       {/* Hero Section */}
@@ -61,6 +72,18 @@ export default function Services() {
             Crafting unforgettable experiences for every occasion ✨
           </p>
         </div>
+
+        {lights.map((light, i) => (
+          <div
+            key={i}
+            style={{
+              top: light.top,
+              left: light.left,
+              animationDelay: light.animationDelay,
+            }}
+            className="absolute bg-yellow-400 rounded-full w-2 h-2 animate-float"
+          />
+        ))}
       </section>
 
       {/* Services Grid */}
