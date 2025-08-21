@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Cinzel } from "next/font/google";
+import { useEffect, useState } from "react";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -21,12 +22,45 @@ export default function Gallery() {
     "/Special-Moment/inauguration.jpeg",
   ];
 
+  const [lights, setLights] = useState([]);
+    useEffect(() => {
+      const newLights = [...Array(10)].map(() => ({
+        top: `${Math.random() * 80 + 10}%`,
+        left: `${Math.random() * 90 + 5}%`,
+        animationDelay: `${Math.random() * 4}s`,
+      }));
+      setLights(newLights);
+    }, []);
+
   return (
     <main className="relative w-full bg-transparent text-black dark:text-white">
       {/* ================= Hero Section ================= */}
-      <section className="relative py-24 text-center bg-black">
-        <h1 className={`text-5xl font-bold text-yellow-500 mb-4 ${cinzel.className}`}>Our Gallery</h1>
-        <p className="text-lg">A glimpse of unforgettable moments we’ve created ✨</p>
+      <section className="relative w-full h-[60vh] flex items-center justify-center text-center text-white">
+        <Image
+          src="/Home/hero.jpg"
+          alt="Services Hero"
+          fill
+          className="object-cover -z-10 brightness-75"
+        />
+        <div className="z-10 px-6">
+          <h1 className={`text-5xl font-bold text-yellow-400 drop-shadow-lg ${cinzel.className}`}>
+            Our Gallery
+          </h1>
+          <p className="mt-4 text-lg max-w-2xl mx-auto">
+            A glimpse of unforgettable moments we’ve created ✨
+          </p>
+        </div>
+        {lights.map((light, i) => (
+          <div
+            key={i}
+            style={{
+              top: light.top,
+              left: light.left,
+              animationDelay: light.animationDelay,
+            }}
+            className="absolute bg-yellow-400 rounded-full w-2 h-2 animate-float"
+          />
+        ))}
       </section>
 
       {/* ================= Gallery Grid ================= */}
