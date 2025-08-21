@@ -1,4 +1,11 @@
 "use client";
+import { Cinzel } from "next/font/google";
+
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 import Image from "next/image";
 
@@ -47,7 +54,7 @@ export default function Services() {
           className="object-cover -z-10 brightness-75"
         />
         <div className="z-10 px-6">
-          <h1 className="text-5xl font-bold text-yellow-400 drop-shadow-lg">
+          <h1 className={`text-5xl font-bold text-yellow-400 drop-shadow-lg ${cinzel.className}`}>
             Our Services
           </h1>
           <p className="mt-4 text-lg max-w-2xl mx-auto">

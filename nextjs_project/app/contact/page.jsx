@@ -1,13 +1,19 @@
 "use client";
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
+import { Cinzel } from "next/font/google";
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 export default function Contact() {
   return (
     <main className="relative w-full bg-transparent">
   {/* Hero Section */}
   <section className="relative py-24 text-center bg-black">
-    <h1 className="text-5xl font-bold text-yellow-500 mb-4">Contact Us</h1>
+    <h1 className={`text-5xl font-bold text-yellow-500 mb-4 ${cinzel.className}`}>Contact Us</h1>
     <p className="text-black dark:text-white text-lg">
       We’re here to make your events unforgettable ✨
     </p>

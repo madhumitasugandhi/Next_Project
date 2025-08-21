@@ -1,6 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import { Cinzel } from "next/font/google";
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 export default function Gallery() {
   const images = [
@@ -19,7 +25,7 @@ export default function Gallery() {
     <main className="relative w-full bg-transparent text-black dark:text-white">
       {/* ================= Hero Section ================= */}
       <section className="relative py-24 text-center bg-black">
-        <h1 className="text-5xl font-bold text-yellow-500 mb-4">Our Gallery</h1>
+        <h1 className={`text-5xl font-bold text-yellow-500 mb-4 ${cinzel.className}`}>Our Gallery</h1>
         <p className="text-lg">A glimpse of unforgettable moments we’ve created ✨</p>
       </section>
 
