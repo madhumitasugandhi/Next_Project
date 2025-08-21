@@ -129,7 +129,7 @@ export default function Home() {
             { title: "Mehndi 🥀", img: "/Special-Moment/mehndi.webp" },
             { title: "Namkaran ♥️", img: "/Special-Moment/namkaran.jpg" },
             { title: "Birthday 🤩", img: "/Special-Moment/birthday.webp" },
-            { title: "Anniversary 💥", img: "/Special-Moment/anniversary.jpg" },
+            { title: "Anniversary 💥", img: "/Special-Moment/wedding-anniversary.jpg" },
             { title: "Inauguration 🎉", img: "/Special-Moment/inauguration.jpeg" },
           ].map((event, i) => (
             <div
