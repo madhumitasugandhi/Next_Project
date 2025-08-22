@@ -12,6 +12,7 @@ const cinzel = Cinzel({
 });
 
 export default function Home() {
+  
   const [lights, setLights] = useState([]);
 
   useEffect(() => {
